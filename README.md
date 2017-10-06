@@ -1,7 +1,5 @@
 # Opoka
-<p align="center">
-    <a href="https://travis-ci.org/naczescjezusa/php-opoka"><img src="https://travis-ci.org/naczescjezusa/php-opoka.svg" alt="Build Status"></a>
-</p>
+![Build Status](https://travis-ci.org/naczescjezusa/php-opoka)
 
 ## Opis
 Biblioteka PHP zabezpieczająca aplikacje i strony internetowe.
