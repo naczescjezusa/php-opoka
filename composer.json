@@ -1,0 +1,22 @@
+{
+    "name": "naczescjezusa/opoka",
+    "description": "Biblioteka PHP zabezpieczająca aplikacje i strony internetowe.",
+    "type": "library",
+    "license": "GPLv2",
+    "keywords": ["opoka", "ochrona"],
+    "authors": [
+        {
+            "name": "Karol Golec",
+            "email": "naczescjezusa@gmail.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "6.4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "NaCzescJezusa\\Opoka\\": "src"
+        }
+    }
+}
