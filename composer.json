@@ -10,9 +10,14 @@
             "email": "naczescjezusa@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "php": ">=5.6",
+        "guzzlehttp/guzzle": "^6.3"
+    },
     "require-dev": {
-        "phpunit/phpunit": "4.0.*" 
+        "phpunit/phpunit": "5.*",
+        "phpunit/phpunit-selenium": "3.*",
+        "se/selenium-server-standalone": "3.5.*"
     },
     "autoload": {
         "psr-4": {
