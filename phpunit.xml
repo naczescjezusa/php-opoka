@@ -18,6 +18,7 @@
         <const name="PHP_SERWER_HOST" value="127.0.0.1" />
         <const name="PHP_SERWER_PORT" value="1349" />
         <const name="PHP_SERWER_KATALOG_ROOT" value="strona_testowa" />
+        <const name="SELENIUM_SERWER_HOST" value="127.0.0.1" />
         <const name="SELENIUM_SERWER_PORT" value="1452" />
     </php>
 </phpunit>
