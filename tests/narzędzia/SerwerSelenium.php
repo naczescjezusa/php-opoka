@@ -43,7 +43,7 @@ class SerwerSelenium {
      * @throws Exception
      */
     private function czekajNaUruchomienieSerweraSelenium() {
-        for ($i = 0; $i < 5; $i++) {
+        for ($i = 0; $i < 30; $i++) {
             $kod_odpowiedzi = @get_headers('http://127.0.0.1:' . SELENIUM_SERWER_PORT)[0];
             if (strpos($kod_odpowiedzi, '200') !== false) {
                 print_r(PHP_EOL . 'Uruchomiono serwer Selenium pod adresem: ' . 'http://127.0.0.1:' . SELENIUM_SERWER_PORT);

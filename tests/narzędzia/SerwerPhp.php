@@ -39,7 +39,7 @@ class SerwerPhp {
      * @throws Exception
      */
     private function czekajNaUruchomieniePhpSerwera() {
-        for ($i = 0; $i < 5; $i++) {
+        for ($i = 0; $i < 30; $i++) {
             $kod_odpowiedzi = @get_headers('http://' . PHP_SERWER_HOST . ':' . PHP_SERWER_PORT)[0];
             if (strpos($kod_odpowiedzi, '200') !== false) {
                 print_r(PHP_EOL . 'Uruchomiono serwer PHP pod adresem: ' . 'http://' . PHP_SERWER_HOST . ':' . PHP_SERWER_PORT);
