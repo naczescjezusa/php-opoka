@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 use NaCzescJezusa\Opoka\Opoka;
 
 class OpokaTest extends PHPUnit_Framework_TestCase {
@@ -19,10 +20,12 @@ class OpokaTest extends PHPUnit_Framework_TestCase {
      * Przed wszystkimi testami
      */
     protected function setUp() {
-        $this->serwerPhp = new SerwerPhp();
-        $this->serwerPhp->uruchomPhpSerwer();
-        $this->serwerSelenium = new SerwerSelenium();
-        $this->serwerSelenium->uruchomSerwerSelenium();
+        if (function_exists('proc_open')) {
+            $this->serwerPhp = new SerwerPhp();
+            $this->serwerPhp->uruchomPhpSerwer();
+            $this->serwerSelenium = new SerwerSelenium();
+            $this->serwerSelenium->uruchomSerwerSelenium();
+        }
     }
 
     public function testStrukturyModułówIFunkcji() {
@@ -35,7 +38,10 @@ class OpokaTest extends PHPUnit_Framework_TestCase {
      * Funkcja na zakończenie wszystkich testów
      */
     public function tearDown() {
-        $this->serwerPhp->zakończDziałanieSerweraPhp();
-        $this->serwerSelenium->zakończDziałanieSerweraSelenium();
+        if (function_exists('proc_open')) {
+            $this->serwerPhp->zakończDziałanieSerweraPhp();
+            $this->serwerSelenium->zakończDziałanieSerweraSelenium();
+        }
     }
+
 }
