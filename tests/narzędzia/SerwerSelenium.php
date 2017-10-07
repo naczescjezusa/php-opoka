@@ -34,7 +34,7 @@ class SerwerSelenium {
      */
     public function zakończDziałanieSerweraSelenium() {
         proc_terminate($this->seleniumSerwerProces, -9);
-        print_r(PHP_EOL . 'Zakończono działanie serwera Selenium pod adresem: ' . 'http://localhost:' . SELENIUM_SERWER_PORT);
+        print_r(PHP_EOL . 'Zakończono działanie serwera Selenium pod adresem: ' . 'http://127.0.0.1:' . SELENIUM_SERWER_PORT);
     }
 
     /**
@@ -44,9 +44,9 @@ class SerwerSelenium {
      */
     private function czekajNaUruchomienieSerweraSelenium() {
         for ($i = 0; $i < 5; $i++) {
-            $kod_odpowiedzi = @get_headers('http://localhost:' . SELENIUM_SERWER_PORT)[0];
+            $kod_odpowiedzi = @get_headers('http://127.0.0.1:' . SELENIUM_SERWER_PORT)[0];
             if (strpos($kod_odpowiedzi, '200') !== false) {
-                print_r(PHP_EOL . 'Uruchomiono serwer Selenium pod adresem: ' . 'http://localhost:' . SELENIUM_SERWER_PORT);
+                print_r(PHP_EOL . 'Uruchomiono serwer Selenium pod adresem: ' . 'http://127.0.0.1:' . SELENIUM_SERWER_PORT);
                 return;
             }
             sleep(1);
