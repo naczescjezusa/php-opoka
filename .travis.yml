@@ -12,8 +12,3 @@ before_script:
  
 script:
   - vendor/bin/phpunit 
-  
-addons:
-  apt:
-    packages:
-      - oracle-java8-installer
